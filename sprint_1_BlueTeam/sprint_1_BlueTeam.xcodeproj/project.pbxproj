@@ -78,8 +78,8 @@
 		534E5F16236326F700F5269F /* ContainerProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				534E5F17236326F700F5269F /* TeamContainer.swift */,
 				534E5F18236326F700F5269F /* ContainerProtocol.swift */,
+				534E5F17236326F700F5269F /* TeamContainer.swift */,
 			);
 			path = ContainerProtocol;
 			sourceTree = "<group>";

@@ -6,7 +6,13 @@
 //  Copyright © 2019 ashepelev. All rights reserved.
 //
 
+import Foundation
+
 class TeamContainer<T>: ContainerProtocol {
+ 
+    typealias Element = T
+    var container : Array<T>
+    
     var isEmpty: Bool {
         get {
             container.isEmpty
@@ -25,26 +31,19 @@ class TeamContainer<T>: ContainerProtocol {
         }
     }
     
-    func append(_ newElement: T) {
-        container.append(newElement)
-    }
-    
-    func remove(at: Int) -> T {
-        return container.remove(at: at)
-    }
-    
-    func sort(by: (T, T) -> Bool) {
-        container.sort(by: by)
-    }
-    
-    func sorted(by: (T, T) -> Bool) -> [T] {
-        return container.sorted(by: by)
-    }
-    
-    typealias Element = T
-    var container : Array<T>
-    
     init() {
         container = Array<T>()
+    }
+    
+    func addNewElement(_ newElement: T) {
+        container.append(newElement);
+    }
+    
+    func getAnyElement() throws -> T {
+        if count == 0 {
+            let exception = NSException()
+            exception.raise()
+        }
+        return container[0]
     }
 }
