@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531CB12E236453750020B08E /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531CB12C236453750020B08E /* ContainerProtocol.swift */; };
+		531CB12F236453750020B08E /* ListByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531CB12D236453750020B08E /* ListByProtocol.swift */; };
 		5332646A23644D3F003736AC /* ContainerProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646923644D3F003736AC /* ContainerProtocolViewController.swift */; };
 		5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */; };
 		5332647023644D79003736AC /* SumFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646F23644D79003736AC /* SumFunctionViewController.swift */; };
@@ -16,9 +18,12 @@
 		534E5F052363245E00F5269F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534E5F042363245E00F5269F /* Assets.xcassets */; };
 		534E5F082363245E00F5269F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534E5F062363245E00F5269F /* LaunchScreen.storyboard */; };
 		534E5F10236324C500F5269F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 534E5F0F236324C500F5269F /* .gitignore */; };
+		53D551B92364A975004E5FE7 /* QueueByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D551B82364A975004E5FE7 /* QueueByProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		531CB12C236453750020B08E /* ContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerProtocol.swift; path = ../../../../../Desktop/ContainerProtocol.swift; sourceTree = "<group>"; };
+		531CB12D236453750020B08E /* ListByProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListByProtocol.swift; path = ../../../../../Desktop/ListByProtocol.swift; sourceTree = "<group>"; };
 		5332646923644D3F003736AC /* ContainerProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocolViewController.swift; sourceTree = "<group>"; };
 		5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBasedOnEnumViewController.swift; sourceTree = "<group>"; };
 		5332646F23644D79003736AC /* SumFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumFunctionViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		534E5F072363245E00F5269F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		534E5F092363245E00F5269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534E5F0F236324C500F5269F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		53D551B82364A975004E5FE7 /* QueueByProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueByProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +52,10 @@
 		5332646B23644D49003736AC /* ContainerProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				531CB12C236453750020B08E /* ContainerProtocol.swift */,
+				531CB12D236453750020B08E /* ListByProtocol.swift */,
 				5332646923644D3F003736AC /* ContainerProtocolViewController.swift */,
+				53D551B82364A975004E5FE7 /* QueueByProtocol.swift */,
 			);
 			path = ContainerProtocol;
 			sourceTree = "<group>";
@@ -174,7 +183,10 @@
 			files = (
 				5332646A23644D3F003736AC /* ContainerProtocolViewController.swift in Sources */,
 				5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */,
+				53D551B92364A975004E5FE7 /* QueueByProtocol.swift in Sources */,
 				534E5EFC2363245D00F5269F /* AppDelegate.swift in Sources */,
+				531CB12F236453750020B08E /* ListByProtocol.swift in Sources */,
+				531CB12E236453750020B08E /* ContainerProtocol.swift in Sources */,
 				5332647023644D79003736AC /* SumFunctionViewController.swift in Sources */,
 				534E5EFE2363245D00F5269F /* SceneDelegate.swift in Sources */,
 			);
