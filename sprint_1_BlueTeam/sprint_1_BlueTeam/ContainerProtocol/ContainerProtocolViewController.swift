@@ -37,6 +37,7 @@ class ContainerProtocolViewController: UIViewController {
         list.push(newElement: newString)
         textField.text = ""
         updateLabel(label: listLabel, list: list)
+		textField.resignFirstResponder()
     }
     
     @IBAction func queueButtonTapped(_ sender: Any) {
@@ -46,6 +47,7 @@ class ContainerProtocolViewController: UIViewController {
         queue.push(newElement: newString)
         textField.text = ""
         updateLabel(label: queueLabel, list: queue)
+		textField.resignFirstResponder()
     }
     
     @IBAction func popButtonTapped(_ sender: Any) {
