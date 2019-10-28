@@ -10,12 +10,22 @@ import UIKit
 
 class SumFunctionViewController: UIViewController {
 
+    @IBOutlet weak var sumResultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        let result = String(Sum(a: "aaaa", b: "bbbbb"))
+        
+        sumResultLabel.text = result
     }
     
+    
+    func Sum<T : NumericOrString> (a: T, b: T)-> T{
+        
+        return a+b
+    }
 
     /*
     // MARK: - Navigation
@@ -28,3 +38,17 @@ class SumFunctionViewController: UIViewController {
     */
 
 }
+
+
+protocol NumericOrString {
+    static func +(lhs: Self, rhs: Self) -> Self
+}
+extension Float: NumericOrString {}
+extension Double: NumericOrString {}
+extension Int: NumericOrString{}
+extension Int32: NumericOrString{}
+extension Int64: NumericOrString{}
+extension String: NumericOrString{}
+
+
+
