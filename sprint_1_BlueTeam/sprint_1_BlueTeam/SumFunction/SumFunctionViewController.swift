@@ -14,10 +14,6 @@ class SumFunctionViewController: UIViewController {
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     @IBAction func sumButton() {
         var result:String
         let firstTextString = firstTextField.text!
@@ -33,6 +29,11 @@ class SumFunctionViewController: UIViewController {
             setLabelText(sum(a: first, b: second))
         } else {
             setLabelText(sum(a: firstTextString, b: secondTextString))
+        }
+        if firstTextField.isFirstResponder {
+            firstTextField.resignFirstResponder()
+        } else {
+            secondTextField.resignFirstResponder()
         }
     }
     

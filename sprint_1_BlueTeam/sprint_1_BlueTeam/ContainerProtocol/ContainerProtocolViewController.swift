@@ -13,7 +13,6 @@ class ContainerProtocolViewController: UIViewController {
     let list = ListByProtocol<String>()
     let queue = Queue<String>()
     
-    
     // MARK: - Outlets
     @IBOutlet var listLabel: UILabel!
     @IBOutlet var listButton: UIButton!
@@ -22,12 +21,6 @@ class ContainerProtocolViewController: UIViewController {
     @IBOutlet var queueLabel: UILabel!
     @IBOutlet var popButton: UIButton!
     @IBOutlet var popLabel: UILabel!
-    
-    // MARK: - Setup
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
     // MARK: - Actions
     @IBAction func listButtonTapped(_ sender: Any) {
@@ -45,7 +38,6 @@ class ContainerProtocolViewController: UIViewController {
         updateLabel(label: queueLabel, container: queue)
     }
     
-    
     // MARK: - Model
     func updateLabel<Container : ContainerProtocol>(label : UILabel, container : Container) where Container.Element == String {
         var labelText = ""
@@ -55,7 +47,7 @@ class ContainerProtocolViewController: UIViewController {
         }
         for i in 0...container.count - 1 {
             if (i != 0) {
-                labelText += ", "
+                labelText += " -> "
             }
             labelText += container.getBy(index: i) ?? "nil"
         }
@@ -68,5 +60,6 @@ class ContainerProtocolViewController: UIViewController {
         }
         container.push(newElement: newString)
         textField.text = ""
+        textField.resignFirstResponder()
     }
 }
