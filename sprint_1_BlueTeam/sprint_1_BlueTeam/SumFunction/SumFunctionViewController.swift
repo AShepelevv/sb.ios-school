@@ -15,20 +15,18 @@ class SumFunctionViewController: UIViewController {
     @IBOutlet weak var secondTextField: UITextField!
     
     @IBAction func sumButton() {
-        var result:String
         let firstTextString = firstTextField.text!
         let secondTextString = secondTextField.text!
         guard !firstTextString.isEmpty, !secondTextString.isEmpty else {
-            result = "Enter two values"
-            sumResultLabel.text = result
+            sumResultLabel.text = "Enter two values"
             return
         }
         if let first = Int(firstTextString), let second = Int(secondTextString) {
-            setLabelText(sum(a: first, b: second))
+            sumResultLabel.text = String(sum(a: first, b: second))
         } else if let first = Double(firstTextString), let second = Double(secondTextString) {
-            setLabelText(sum(a: first, b: second))
+            sumResultLabel.text = String(sum(a: first, b: second))
         } else {
-            setLabelText(sum(a: firstTextString, b: secondTextString))
+            sumResultLabel.text = sum(a: firstTextString, b: secondTextString)
         }
         if firstTextField.isFirstResponder {
             firstTextField.resignFirstResponder()
@@ -39,9 +37,5 @@ class SumFunctionViewController: UIViewController {
     
     func sum<T : NumericOrString> (a: T, b: T) -> T {
         return a + b
-    }
-    
-    func setLabelText<T : LosslessStringConvertible> (_ value: T) {
-        sumResultLabel.text = String(value)
     }
 }
