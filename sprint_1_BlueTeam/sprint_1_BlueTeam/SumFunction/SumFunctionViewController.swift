@@ -21,31 +21,29 @@ class SumFunctionViewController: UIViewController {
     
     @IBAction func sumButton() {
         var result:String
-        guard !firstTextField.text!.isEmpty, !secondTextField.text!.isEmpty else {
+        let firstTextString = firstTextField.text!
+        let secondTextString = secondTextField.text!
+        guard !firstTextString.isEmpty, !secondTextString.isEmpty else {
             result = "Enter two values"
             sumResultLabel.text = result
             return
         }
-        if let first = Int(firstTextField.text!), let second = Int(secondTextField.text!){
+        if let first = Int(firstTextString), let second = Int(secondTextString){
             
             result = String(Sum(a: first, b: second))
             sumResultLabel.text = result
             return
         }
-        if let first = Double(firstTextField.text!), let second = Double(secondTextField.text!) {
+        if let first = Double(firstTextString), let second = Double(secondTextString) {
             result = String(Sum(a: first, b: second))
             sumResultLabel.text = result
             return
-        }
-        else{
-            result = String(Sum(a: firstTextField.text!, b: secondTextField.text!))
+        }else{
+            result = String(Sum(a: firstTextString, b: secondTextString))
             sumResultLabel.text = result
             return
         }
-        
     }
-    
-    
     
     func Sum<T : NumericOrString> (a: T, b: T)-> T{
         
