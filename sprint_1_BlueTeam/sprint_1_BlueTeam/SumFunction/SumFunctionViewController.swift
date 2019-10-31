@@ -16,7 +16,6 @@ class SumFunctionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func sumButton() {
@@ -30,36 +29,25 @@ class SumFunctionViewController: UIViewController {
         }
         if let first = Int(firstTextString), let second = Int(secondTextString){
             
-            result = String(Sum(a: first, b: second))
+            result = String(sum(a: first, b: second))
             sumResultLabel.text = result
             return
         }
         if let first = Double(firstTextString), let second = Double(secondTextString) {
-            result = String(Sum(a: first, b: second))
+            result = String(sum(a: first, b: second))
             sumResultLabel.text = result
             return
         }else{
-            result = String(Sum(a: firstTextString, b: secondTextString))
+            result = String(sum(a: firstTextString, b: secondTextString))
             sumResultLabel.text = result
             return
         }
     }
     
-    func Sum<T : NumericOrString> (a: T, b: T)-> T{
+    func sum<T : NumericOrString> (a: T, b: T)-> T{
         
         return a+b
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
