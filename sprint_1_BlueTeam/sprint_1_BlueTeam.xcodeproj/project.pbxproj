@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0986CDD9236ACE190023D2F8 /* SumProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986CDD8236ACE190023D2F8 /* SumProtocol.swift */; };
-		5332646A23644D3F003736AC /* ContainerProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646923644D3F003736AC /* ContainerProtocolViewController.swift */; };
 		5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */; };
 		5332647023644D79003736AC /* SumFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646F23644D79003736AC /* SumFunctionViewController.swift */; };
 		534E5EFC2363245D00F5269F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E5EFB2363245D00F5269F /* AppDelegate.swift */; };
@@ -17,14 +16,14 @@
 		534E5F052363245E00F5269F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534E5F042363245E00F5269F /* Assets.xcassets */; };
 		534E5F082363245E00F5269F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534E5F062363245E00F5269F /* LaunchScreen.storyboard */; };
 		534E5F10236324C500F5269F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 534E5F0F236324C500F5269F /* .gitignore */; };
-		53D551B92364A975004E5FE7 /* QueueByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D551B82364A975004E5FE7 /* QueueByProtocol.swift */; };
-		A46A48EE2367203600FA4C1F /* ListByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A48ED2367203600FA4C1F /* ListByProtocol.swift */; };
-		A46A48F02367203D00FA4C1F /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A48EF2367203D00FA4C1F /* ContainerProtocol.swift */; };
+		5366294B236AE78300D23228 /* QueueByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53662947236AE78300D23228 /* QueueByProtocol.swift */; };
+		5366294C236AE78300D23228 /* ListByProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53662948236AE78300D23228 /* ListByProtocol.swift */; };
+		5366294D236AE78300D23228 /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53662949236AE78300D23228 /* ContainerProtocol.swift */; };
+		5366294E236AE78300D23228 /* ContainerProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366294A236AE78300D23228 /* ContainerProtocolViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0986CDD8236ACE190023D2F8 /* SumProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumProtocol.swift; sourceTree = "<group>"; };
-		5332646923644D3F003736AC /* ContainerProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocolViewController.swift; sourceTree = "<group>"; };
 		5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBasedOnEnumViewController.swift; sourceTree = "<group>"; };
 		5332646F23644D79003736AC /* SumFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumFunctionViewController.swift; sourceTree = "<group>"; };
 		534E5EF82363245D00F5269F /* sprint_1_BlueTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sprint_1_BlueTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +34,10 @@
 		534E5F072363245E00F5269F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		534E5F092363245E00F5269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534E5F0F236324C500F5269F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
-		53D551B82364A975004E5FE7 /* QueueByProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueByProtocol.swift; sourceTree = "<group>"; };
-		A46A48ED2367203600FA4C1F /* ListByProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListByProtocol.swift; sourceTree = "<group>"; };
-		A46A48EF2367203D00FA4C1F /* ContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		53662947236AE78300D23228 /* QueueByProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueByProtocol.swift; sourceTree = "<group>"; };
+		53662948236AE78300D23228 /* ListByProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListByProtocol.swift; sourceTree = "<group>"; };
+		53662949236AE78300D23228 /* ContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		5366294A236AE78300D23228 /* ContainerProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerProtocolViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +54,10 @@
 		5332646B23644D49003736AC /* ContainerProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				A46A48EF2367203D00FA4C1F /* ContainerProtocol.swift */,
-				A46A48ED2367203600FA4C1F /* ListByProtocol.swift */,
-				5332646923644D3F003736AC /* ContainerProtocolViewController.swift */,
-				53D551B82364A975004E5FE7 /* QueueByProtocol.swift */,
+				53662949236AE78300D23228 /* ContainerProtocol.swift */,
+				5366294A236AE78300D23228 /* ContainerProtocolViewController.swift */,
+				53662948236AE78300D23228 /* ListByProtocol.swift */,
+				53662947236AE78300D23228 /* QueueByProtocol.swift */,
 			);
 			path = ContainerProtocol;
 			sourceTree = "<group>";
@@ -85,6 +85,7 @@
 				534E5F0F236324C500F5269F /* .gitignore */,
 				534E5EFA2363245D00F5269F /* sprint_1_BlueTeam */,
 				534E5EF92363245D00F5269F /* Products */,
+				53662946236AE35700D23228 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +111,13 @@
 				5332647123644D7F003736AC /* SumFunction */,
 			);
 			path = sprint_1_BlueTeam;
+			sourceTree = "<group>";
+		};
+		53662946236AE35700D23228 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,15 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5332646A23644D3F003736AC /* ContainerProtocolViewController.swift in Sources */,
 				0986CDD9236ACE190023D2F8 /* SumProtocol.swift in Sources */,
+				5366294D236AE78300D23228 /* ContainerProtocol.swift in Sources */,
+				5366294E236AE78300D23228 /* ContainerProtocolViewController.swift in Sources */,
+				5366294C236AE78300D23228 /* ListByProtocol.swift in Sources */,
 				5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */,
-				53D551B92364A975004E5FE7 /* QueueByProtocol.swift in Sources */,
+				5366294B236AE78300D23228 /* QueueByProtocol.swift in Sources */,
 				534E5EFC2363245D00F5269F /* AppDelegate.swift in Sources */,
-				A46A48EE2367203600FA4C1F /* ListByProtocol.swift in Sources */,
 				5332647023644D79003736AC /* SumFunctionViewController.swift in Sources */,
 				534E5EFE2363245D00F5269F /* SceneDelegate.swift in Sources */,
-				A46A48F02367203D00FA4C1F /* ContainerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = sprint_1_BlueTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -358,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = sprint_1_BlueTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -27,27 +27,20 @@ class SumFunctionViewController: UIViewController {
             sumResultLabel.text = result
             return
         }
-        if let first = Int(firstTextString), let second = Int(secondTextString){
-            
-            result = String(sum(a: first, b: second))
-            sumResultLabel.text = result
-            return
-        }
-        if let first = Double(firstTextString), let second = Double(secondTextString) {
-            result = String(sum(a: first, b: second))
-            sumResultLabel.text = result
-            return
-        }else{
-            result = String(sum(a: firstTextString, b: secondTextString))
-            sumResultLabel.text = result
-            return
+        if let first = Int(firstTextString), let second = Int(secondTextString) {
+            setLabelText(sum(a: first, b: second))
+        } else if let first = Double(firstTextString), let second = Double(secondTextString) {
+            setLabelText(sum(a: first, b: second))
+        } else {
+            setLabelText(sum(a: firstTextString, b: secondTextString))
         }
     }
     
-    func sum<T : NumericOrString> (a: T, b: T)-> T{
-        
-        return a+b
+    func sum<T : NumericOrString> (a: T, b: T) -> T {
+        return a + b
+    }
+    
+    func setLabelText<T : LosslessStringConvertible> (_ value: T) {
+        sumResultLabel.text = String(value)
     }
 }
-
-
