@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0986CDD9236ACE190023D2F8 /* SumProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986CDD8236ACE190023D2F8 /* SumProtocol.swift */; };
 		5332646A23644D3F003736AC /* ContainerProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646923644D3F003736AC /* ContainerProtocolViewController.swift */; };
 		5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */; };
 		5332647023644D79003736AC /* SumFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332646F23644D79003736AC /* SumFunctionViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0986CDD8236ACE190023D2F8 /* SumProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumProtocol.swift; sourceTree = "<group>"; };
 		5332646923644D3F003736AC /* ContainerProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocolViewController.swift; sourceTree = "<group>"; };
 		5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBasedOnEnumViewController.swift; sourceTree = "<group>"; };
 		5332646F23644D79003736AC /* SumFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumFunctionViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5332646F23644D79003736AC /* SumFunctionViewController.swift */,
+				0986CDD8236ACE190023D2F8 /* SumProtocol.swift */,
 			);
 			path = SumFunction;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5332646A23644D3F003736AC /* ContainerProtocolViewController.swift in Sources */,
+				0986CDD9236ACE190023D2F8 /* SumProtocol.swift in Sources */,
 				5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */,
 				53D551B92364A975004E5FE7 /* QueueByProtocol.swift in Sources */,
 				534E5EFC2363245D00F5269F /* AppDelegate.swift in Sources */,
@@ -334,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F22994NDM8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = sprint_1_BlueTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F22994NDM8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = sprint_1_BlueTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
