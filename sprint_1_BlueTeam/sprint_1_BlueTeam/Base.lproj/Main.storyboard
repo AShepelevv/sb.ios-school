@@ -31,22 +31,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKN-sC-0zf">
-                                <rect key="frame" x="177" y="435" width="60.5" height="26.5"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="oy3-Js-A7i">
+                                <rect key="frame" x="53.5" y="373.5" width="307" height="149.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="juY-GC-n7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJA-2e-wN3">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="kb2-yv-YmZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsG-mD-2Qw">
+                                                <rect key="frame" x="145" y="0.0" width="17" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQZ-t7-lDY">
+                                                <rect key="frame" x="182" y="0.0" width="125" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="sUH-vP-YhG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmT-5Q-YnW">
+                                        <rect key="frame" x="131" y="56" width="45" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="653-Xa-7hk"/>
+                                            <constraint firstAttribute="height" constant="45" id="Btc-eG-nl7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sumButton" destination="VC7-e0-hHg" eventType="touchUpInside" id="sBu-Jv-cI1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKN-sC-0zf">
+                                        <rect key="frame" x="118.5" y="123" width="70.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QKN-sC-0zf" firstAttribute="centerY" secondItem="SP7-qr-Zrc" secondAttribute="centerY" id="ceY-Om-jbU"/>
-                            <constraint firstItem="QKN-sC-0zf" firstAttribute="centerX" secondItem="SP7-qr-Zrc" secondAttribute="centerX" id="zEi-Qy-yWp"/>
+                            <constraint firstItem="oy3-Js-A7i" firstAttribute="centerX" secondItem="SP7-qr-Zrc" secondAttribute="centerX" id="bNs-wD-dU3"/>
+                            <constraint firstItem="oy3-Js-A7i" firstAttribute="centerY" secondItem="SP7-qr-Zrc" secondAttribute="centerY" id="yQF-oZ-QHm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dxf-H7-laI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SumFunction" id="gjO-zp-Evy"/>
                     <connections>
+                        <outlet property="firstTextField" destination="sJA-2e-wN3" id="pdg-tk-tIV"/>
+                        <outlet property="secondTextField" destination="RQZ-t7-lDY" id="dFm-mz-646"/>
                         <outlet property="sumResultLabel" destination="QKN-sC-0zf" id="Izd-dF-1Wm"/>
                     </connections>
                 </viewController>

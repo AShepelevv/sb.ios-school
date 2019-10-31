@@ -11,15 +11,40 @@ import UIKit
 class SumFunctionViewController: UIViewController {
 
     @IBOutlet weak var sumResultLabel: UILabel!
+    @IBOutlet weak var firstTextField: UITextField!
+    @IBOutlet weak var secondTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        let result = String(Sum(a: "aaaa", b: "bbbbb"))
-        
-        sumResultLabel.text = result
     }
+    
+    @IBAction func sumButton() {
+        var result:String
+        guard !firstTextField.text!.isEmpty, !secondTextField.text!.isEmpty else {
+            result = "Enter two values"
+            sumResultLabel.text = result
+            return
+        }
+        if let first = Int(firstTextField.text!), let second = Int(secondTextField.text!){
+            
+            result = String(Sum(a: first, b: second))
+            sumResultLabel.text = result
+            return
+        }
+        if let first = Double(firstTextField.text!), let second = Double(secondTextField.text!) {
+            result = String(Sum(a: first, b: second))
+            sumResultLabel.text = result
+            return
+        }
+        else{
+            result = String(Sum(a: firstTextField.text!, b: secondTextField.text!))
+            sumResultLabel.text = result
+            return
+        }
+        
+    }
+    
     
     
     func Sum<T : NumericOrString> (a: T, b: T)-> T{
@@ -38,17 +63,5 @@ class SumFunctionViewController: UIViewController {
     */
 
 }
-
-
-protocol NumericOrString {
-    static func +(lhs: Self, rhs: Self) -> Self
-}
-extension Float: NumericOrString {}
-extension Double: NumericOrString {}
-extension Int: NumericOrString{}
-extension Int32: NumericOrString{}
-extension Int64: NumericOrString{}
-extension String: NumericOrString{}
-
 
 
