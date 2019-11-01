@@ -23,8 +23,8 @@
 		53662952236B08C700D23228 /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53662951236B08C700D23228 /* QueueViewController.swift */; };
 		53662954236B0B8200D23228 /* ContainerVCUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53662953236B0B8200D23228 /* ContainerVCUtilities.swift */; };
 		A423B5AC236B233400D54793 /* EnumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423B5A9236B233400D54793 /* EnumTableViewCell.swift */; };
-		A423B5AD236B233400D54793 /* EnumALertsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423B5AA236B233400D54793 /* EnumALertsExtensions.swift */; };
 		A423B5AE236B233400D54793 /* EnumBasedDoubleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423B5AB236B233400D54793 /* EnumBasedDoubleList.swift */; };
+		B0D38126824FBA3C5B4C605E /* AlertControllerFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D38673E840350EE11A93FB /* AlertControllerFabric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,8 +46,8 @@
 		53662951236B08C700D23228 /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
 		53662953236B0B8200D23228 /* ContainerVCUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVCUtilities.swift; sourceTree = "<group>"; };
 		A423B5A9236B233400D54793 /* EnumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumTableViewCell.swift; sourceTree = "<group>"; };
-		A423B5AA236B233400D54793 /* EnumALertsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumALertsExtensions.swift; sourceTree = "<group>"; };
 		A423B5AB236B233400D54793 /* EnumBasedDoubleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumBasedDoubleList.swift; sourceTree = "<group>"; };
+		B0D38673E840350EE11A93FB /* AlertControllerFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerFabric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +77,10 @@
 		5332646E23644D63003736AC /* ListBasedOnEnum */ = {
 			isa = PBXGroup;
 			children = (
-				A423B5AA236B233400D54793 /* EnumALertsExtensions.swift */,
 				A423B5AB236B233400D54793 /* EnumBasedDoubleList.swift */,
 				A423B5A9236B233400D54793 /* EnumTableViewCell.swift */,
 				5332646C23644D5F003736AC /* ListBasedOnEnumViewController.swift */,
+				B0D38673E840350EE11A93FB /* AlertControllerFabric.swift */,
 			);
 			path = ListBasedOnEnum;
 			sourceTree = "<group>";
@@ -214,13 +214,13 @@
 				5332646D23644D5F003736AC /* ListBasedOnEnumViewController.swift in Sources */,
 				53662954236B0B8200D23228 /* ContainerVCUtilities.swift in Sources */,
 				5366294B236AE78300D23228 /* QueueByProtocol.swift in Sources */,
-				A423B5AD236B233400D54793 /* EnumALertsExtensions.swift in Sources */,
 				534E5EFC2363245D00F5269F /* AppDelegate.swift in Sources */,
 				5332647023644D79003736AC /* SumFunctionViewController.swift in Sources */,
 				53662950236B08BB00D23228 /* ListViewController.swift in Sources */,
 				53662952236B08C700D23228 /* QueueViewController.swift in Sources */,
 				A423B5AC236B233400D54793 /* EnumTableViewCell.swift in Sources */,
 				534E5EFE2363245D00F5269F /* SceneDelegate.swift in Sources */,
+				B0D38126824FBA3C5B4C605E /* AlertControllerFabric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

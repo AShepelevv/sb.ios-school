@@ -10,9 +10,20 @@ import UIKit
 
 public final class ListBasedOnEnumViewController: UITableViewController {
     // MARK: - ENum
-    lazy var list: DoubleLinkedList<String> = DoubleLinkedList<String>()
+    var list: DoubleLinkedList<String> = DoubleLinkedList<String>() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
+    // MARK: - Properties
+    var alertControllerFabric:AlertControllerFabric!
+
+    // MARK: - ViewController lifecycle
     override public func viewDidLoad() {
         super.viewDidLoad()
+        alertControllerFabric = AlertControllerFabric(self)
+        configureAlertHandlers()
         navBarConfigure()
         tableView.register(EnumTableViewCell.self, forCellReuseIdentifier: "EnumCell")
     }
@@ -52,7 +63,50 @@ extension ListBasedOnEnumViewController {
         navigationItem.title = "Enum Linked List"
         navigationItem.rightBarButtonItem = UIBarButtonItem (
                 barButtonSystemItem: .action,
-                target: self,
-                action: #selector(actionSelector))
+                target: alertControllerFabric,
+                action: #selector(alertControllerFabric.actionSelector))
+    }
+}
+
+// MARK: - AlertControllerFabric
+extension ListBasedOnEnumViewController {
+    private func configureAlertHandlers() {
+        alertControllerFabric.pushHandler = {[unowned self] text in
+            self.list.push(text)
+        }
+        alertControllerFabric.appendHandler = {[unowned self] text in
+            self.list.append(text)
+        }
+        alertControllerFabric.insertAtHandler = {[unowned self] text, index in
+            self.list.insert(value: text, at: index)
+        }
+        alertControllerFabric.popHandler = {[unowned self] in
+            if let text = self.list.pop() {
+                self.alertControllerFabric.messageAlert("Poped value: \(text)")
+            } else {
+                self.alertControllerFabric.messageAlert()
+            }
+        }
+        alertControllerFabric.removeLastHandler = {[unowned self] in
+            if let text = self.list.removeLast() {
+                self.alertControllerFabric.messageAlert("Remover value: \(text)")
+            } else {
+                self.alertControllerFabric.messageAlert()
+            }
+        }
+        alertControllerFabric.removeAtHandler = {[unowned self] index in
+            if let text = self.list.remove(at: index) {
+                self.alertControllerFabric.messageAlert("Value: \(text)\n removed from index: \(index)")
+            } else {
+                self.alertControllerFabric.messageAlert("List is empty or wrong index")
+            }
+        }
+        alertControllerFabric.listLengthHandler = {[unowned self] in
+            if self.list.isEmpty {
+                self.alertControllerFabric.messageAlert()
+            } else {
+                self.alertControllerFabric.messageAlert("List length: \(self.list.listLength())")
+            }
+        }
     }
 }
