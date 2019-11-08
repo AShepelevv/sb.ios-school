@@ -26,7 +26,6 @@ class TabBarViewControllerBuilder: UIViewController {
         navVCForNotes.viewControllers = [noteScreenVC]
         
         
-        UserDefaults.standard.set(true, forKey: "isAthorized")
         
         tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
         tabBar.modalPresentationStyle = .fullScreen

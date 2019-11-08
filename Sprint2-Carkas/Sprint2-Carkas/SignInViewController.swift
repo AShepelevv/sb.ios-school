@@ -29,7 +29,7 @@ class SignInViewController: UIViewController {
     
     @objc
     func openAppFunc() {
-        
+        UserDefaults.standard.set(true, forKey: "isAthorized")
         present(TabBarViewControllerBuilder.makeAuthorizationAndOpenApp(), animated: true, completion: nil)
         
     }
