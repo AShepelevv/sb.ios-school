@@ -29,19 +29,8 @@ class SignInViewController: UIViewController {
     
     @objc
     func openAppFunc() {
-        let noteScreenVC = NoteScreenViewController()
-        let settingVC = SettingsViewController()
-        let tasksVC = TasksViewController()
-        let tabBar = UITabBarController()
-        let navVCForNotes = UINavigationController()
-        navVCForNotes.viewControllers = [noteScreenVC]
         
-        
-        UserDefaults.standard.set(true, forKey: "isAthorized")
-        
-        tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
-        tabBar.modalPresentationStyle = .fullScreen
-        present(tabBar, animated: true, completion: nil)
+        present(TabBarViewControllerBuilder.makeAuthorizationAndOpenApp(), animated: true, completion: nil)
         
     }
 

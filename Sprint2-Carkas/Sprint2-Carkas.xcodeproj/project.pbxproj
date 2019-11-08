@@ -19,6 +19,7 @@
 		E3FECFE82374E04F00B35F1D /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FECFE72374E04F00B35F1D /* TasksViewController.swift */; };
 		E3FECFEA2374F74F00B35F1D /* NoteScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FECFE92374F74F00B35F1D /* NoteScreenViewController.swift */; };
 		E3FECFEC2374FC9700B35F1D /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FECFEB2374FC9700B35F1D /* NoteEditViewController.swift */; };
+		E3FECFEE2375C03400B35F1D /* TabBarViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FECFED2375C03400B35F1D /* TabBarViewControllerBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E3FECFE72374E04F00B35F1D /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		E3FECFE92374F74F00B35F1D /* NoteScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteScreenViewController.swift; sourceTree = "<group>"; };
 		E3FECFEB2374FC9700B35F1D /* NoteEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
+		E3FECFED2375C03400B35F1D /* TabBarViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				E3FECFE72374E04F00B35F1D /* TasksViewController.swift */,
 				E3FECFE92374F74F00B35F1D /* NoteScreenViewController.swift */,
 				E3FECFE32374DD0A00B35F1D /* SignInViewController.swift */,
+				E3FECFED2375C03400B35F1D /* TabBarViewControllerBuilder.swift */,
 				E3FECFEB2374FC9700B35F1D /* NoteEditViewController.swift */,
 				E3FECFD22374CCBD00B35F1D /* Assets.xcassets */,
 				E3FECFD42374CCBD00B35F1D /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 				E3FECFCE2374CCBC00B35F1D /* MainViewController.swift in Sources */,
 				E3FECFE22374DBF200B35F1D /* SignUpViewController.swift in Sources */,
 				E3FECFEC2374FC9700B35F1D /* NoteEditViewController.swift in Sources */,
+				E3FECFEE2375C03400B35F1D /* TabBarViewControllerBuilder.swift in Sources */,
 				E3FECFE82374E04F00B35F1D /* TasksViewController.swift in Sources */,
 				E3FECFE42374DD0A00B35F1D /* SignInViewController.swift in Sources */,
 				E3FECFCC2374CCBC00B35F1D /* AppDelegate.swift in Sources */,
