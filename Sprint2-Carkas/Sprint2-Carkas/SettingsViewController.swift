@@ -37,8 +37,8 @@ class SettingsViewController: UIViewController {
     @objc
     func signOutFunc() {
         let regVC = AuthorizationViewController()
-        let navVCForReg = UINavigationController()
-        navVCForReg.viewControllers = [regVC]
+        let navVCForReg = UINavigationController(rootViewController: regVC)
+        navVCForReg.modalPresentationStyle = .fullScreen
         
         UserDefaults.standard.set(false, forKey: "isAthorized")
         
