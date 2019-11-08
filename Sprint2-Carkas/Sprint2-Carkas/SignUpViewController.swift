@@ -16,7 +16,8 @@ class SignUpViewController: UIViewController {
         
         let warningLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 300))
         warningLabel.center = CGPoint(x: view.center.x, y: view.center.y - 100)
-        warningLabel.text = "Извините, данная функция сейчас недоступна. Зарегистрируйтесь через сайт"
+        warningLabel.text = "Извините, данная функция сейчас недоступна.\n Зарегистрируйтесь через сайт"
+        warningLabel.textAlignment = .center
         warningLabel.numberOfLines = 5
         
         view.addSubview(warningLabel)

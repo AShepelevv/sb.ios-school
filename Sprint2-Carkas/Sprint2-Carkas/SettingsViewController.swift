@@ -29,6 +29,7 @@ class SettingsViewController: UIViewController {
         signOut.center = view.center
         signOut.setTitle("Sign OUT", for: .normal)
         signOut.addTarget(self, action: #selector(signOutFunc), for: .touchUpInside)
+        signOut.tintColor = .white
         
         view.addSubview(signOut)
     }

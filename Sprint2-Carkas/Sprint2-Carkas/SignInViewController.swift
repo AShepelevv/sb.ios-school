@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
         openApp.center = view.center
         openApp.setTitle("Нажмите на кнопку", for: .normal)
         openApp.addTarget(self, action: #selector(openAppFunc), for: .touchUpInside)
+        openApp.tintColor = .white
         
         
         view.addSubview(openApp)
@@ -39,6 +40,7 @@ class SignInViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "isAthorized")
         
         tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
+        tabBar.modalPresentationStyle = .fullScreen
         present(tabBar, animated: true, completion: nil)
         
     }

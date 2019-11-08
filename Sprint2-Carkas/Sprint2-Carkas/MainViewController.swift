@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         startButton.backgroundColor = .blue
         startButton.center = view.center
         startButton.setTitle("Начать!", for: .normal)
+        startButton.tintColor = .white
         startButton.addTarget(self, action: #selector(startFunc), for: .touchUpInside)
         
         let helloLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 300))
@@ -37,8 +38,9 @@ class MainViewController: UIViewController {
         if (!isAthorized)
         {
             let regVC = AuthorizationViewController()
-            let navVCForReg = UINavigationController()
-            navVCForReg.viewControllers = [regVC]
+            let navVCForReg = UINavigationController(rootViewController: regVC)
+            navVCForReg.modalPresentationStyle = .fullScreen
+//            navVCForReg.viewControllers = [regVC]
             present(navVCForReg, animated: true, completion: nil)
         } else {
             let noteScreenVC = NoteScreenViewController()
@@ -50,6 +52,7 @@ class MainViewController: UIViewController {
             
             
             tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
+            tabBar.modalPresentationStyle = .fullScreen
             present(tabBar, animated: true, completion: nil)
         }
         

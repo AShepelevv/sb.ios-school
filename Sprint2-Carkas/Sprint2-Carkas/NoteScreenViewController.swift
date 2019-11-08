@@ -25,7 +25,7 @@ class NoteScreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        let barItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(itemPressed))
+        let barItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(itemPressed))
         navigationItem.rightBarButtonItem = barItem
         
        
