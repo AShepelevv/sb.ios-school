@@ -25,11 +25,17 @@ class TabBarViewControllerBuilder: UIViewController {
         let navVCForNotes = UINavigationController()
         navVCForNotes.viewControllers = [noteScreenVC]
         
-        
-        
         tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
         tabBar.modalPresentationStyle = .fullScreen
         return tabBar
+    }
+    
+    public static func openAuthorizationWindow() -> UINavigationController
+    {
+        let regVC = AuthorizationViewController()
+        let navVCForReg = UINavigationController(rootViewController: regVC)
+        navVCForReg.modalPresentationStyle = .fullScreen
+        return navVCForReg
     }
     
 

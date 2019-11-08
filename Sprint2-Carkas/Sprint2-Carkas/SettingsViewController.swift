@@ -36,13 +36,10 @@ class SettingsViewController: UIViewController {
     
     @objc
     func signOutFunc() {
-        let regVC = AuthorizationViewController()
-        let navVCForReg = UINavigationController()
-        navVCForReg.viewControllers = [regVC]
         
         UserDefaults.standard.set(false, forKey: "isAthorized")
         
-        present(navVCForReg, animated: true, completion: nil)
+        present(TabBarViewControllerBuilder.openAuthorizationWindow(), animated: true, completion: nil)
     }
 
     

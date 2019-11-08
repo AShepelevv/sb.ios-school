@@ -37,11 +37,7 @@ class MainViewController: UIViewController {
         let isAthorized = UserDefaults.standard.bool(forKey: "isAthorized") 
         if (!isAthorized)
         {
-            let regVC = AuthorizationViewController()
-            let navVCForReg = UINavigationController(rootViewController: regVC)
-            navVCForReg.modalPresentationStyle = .fullScreen
-//            navVCForReg.viewControllers = [regVC]
-            present(navVCForReg, animated: true, completion: nil)
+            present(TabBarViewControllerBuilder.openAuthorizationWindow(), animated: true, completion: nil)
         } else {
             present(TabBarViewControllerBuilder.makeAuthorizationAndOpenApp(), animated: true, completion: nil)
         }
