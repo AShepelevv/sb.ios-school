@@ -36,6 +36,7 @@ class SettingsViewController: UIViewController {
     
     @objc
     func signOutFunc() {
+
         
         UserDefaults.standard.set(false, forKey: "isAthorized")
         
