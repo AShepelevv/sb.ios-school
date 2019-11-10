@@ -40,7 +40,11 @@ class SettingsViewController: UIViewController {
         
         UserDefaults.standard.set(false, forKey: "isAthorized")
         
+//        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
         present(TabBarViewControllerBuilder.openAuthorizationWindow(), animated: true, completion: nil)
+
     }
 
     
