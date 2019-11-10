@@ -28,7 +28,7 @@ class SecondViewController: UIViewController {
     func nextButtonTapped() {
         let nextVC = ThirdViewController()
         nextVC.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(nextVC, animated: true)
+        present(nextVC, animated: true, completion: nil)
     }
 
 	override func viewWillAppear(_ animated: Bool) {
