@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         startButton.backgroundColor = .blue
         startButton.center = view.center
         startButton.setTitle("Начать!", for: .normal)
+        startButton.tintColor = .white
         startButton.addTarget(self, action: #selector(startFunc), for: .touchUpInside)
         
         let helloLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 300))
@@ -36,21 +37,9 @@ class MainViewController: UIViewController {
         let isAthorized = UserDefaults.standard.bool(forKey: "isAthorized") 
         if (!isAthorized)
         {
-            let regVC = AuthorizationViewController()
-            let navVCForReg = UINavigationController()
-            navVCForReg.viewControllers = [regVC]
-            present(navVCForReg, animated: true, completion: nil)
+            present(TabBarViewControllerBuilder.openAuthorizationWindow(), animated: true, completion: nil)
         } else {
-            let noteScreenVC = NoteScreenViewController()
-            let settingVC = SettingsViewController()
-            let tasksVC = TasksViewController()
-            let tabBar = UITabBarController()
-            let navVCForNotes = UINavigationController()
-            navVCForNotes.viewControllers = [noteScreenVC]
-            
-            
-            tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
-            present(tabBar, animated: true, completion: nil)
+            present(TabBarViewControllerBuilder.makeAuthorizationAndOpenApp(), animated: true, completion: nil)
         }
         
     }

@@ -16,21 +16,23 @@ class AuthorizationViewController: UIViewController {
 
         let picture = UIImageView(image: UIImage(named: "ball.png"))
         picture.frame = CGRect(x: 0, y: 0, width: 256, height: 256)
-        picture.center = CGPoint(x: view.center.x, y: view.center.y - 250)
+        picture.center = CGPoint(x: view.center.x, y: view.center.y - 150)
         
         let signInButton = UIButton(type: .system)
         signInButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         signInButton.backgroundColor = .blue
-        signInButton.center = CGPoint(x: view.center.x, y: view.center.y - 100)
+        signInButton.center = CGPoint(x: view.center.x, y: view.center.y + 10)
         signInButton.setTitle("Sign IN", for: .normal)
         signInButton.addTarget(self, action: #selector(signInFunc), for: .touchUpInside)
+        signInButton.tintColor = .white
         
         let signUpButton = UIButton(type: .system)
         signUpButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         signUpButton.backgroundColor = .blue
-        signUpButton.center = CGPoint(x: view.center.x, y: view.center.y - 40)
+        signUpButton.center = CGPoint(x: view.center.x, y: view.center.y + 80)
         signUpButton.setTitle("Sign UP", for: .normal)
         signUpButton.addTarget(self, action: #selector(signUpFunc), for: .touchUpInside)
+        signUpButton.tintColor = .white
         
         
         view.addSubview(picture)

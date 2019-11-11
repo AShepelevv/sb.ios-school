@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
         openApp.center = view.center
         openApp.setTitle("Нажмите на кнопку", for: .normal)
         openApp.addTarget(self, action: #selector(openAppFunc), for: .touchUpInside)
+        openApp.tintColor = .white
         
         
         view.addSubview(openApp)
@@ -28,18 +29,8 @@ class SignInViewController: UIViewController {
     
     @objc
     func openAppFunc() {
-        let noteScreenVC = NoteScreenViewController()
-        let settingVC = SettingsViewController()
-        let tasksVC = TasksViewController()
-        let tabBar = UITabBarController()
-        let navVCForNotes = UINavigationController()
-        navVCForNotes.viewControllers = [noteScreenVC]
-        
-        
         UserDefaults.standard.set(true, forKey: "isAthorized")
-        
-        tabBar.viewControllers = [tasksVC, navVCForNotes, settingVC]
-        present(tabBar, animated: true, completion: nil)
+        present(TabBarViewControllerBuilder.makeAuthorizationAndOpenApp(), animated: true, completion: nil)
         
     }
 

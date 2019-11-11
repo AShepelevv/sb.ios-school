@@ -29,20 +29,18 @@ class SettingsViewController: UIViewController {
         signOut.center = view.center
         signOut.setTitle("Sign OUT", for: .normal)
         signOut.addTarget(self, action: #selector(signOutFunc), for: .touchUpInside)
+        signOut.tintColor = .white
         
         view.addSubview(signOut)
     }
     
     @objc
     func signOutFunc() {
-        let regVC = AuthorizationViewController()
-        let navVCForReg = UINavigationController()
-        navVCForReg.viewControllers = [regVC]
+
         
         UserDefaults.standard.set(false, forKey: "isAthorized")
-        
-        present(navVCForReg, animated: true, completion: nil)
-    }
+        Navigator.backToAuth()
+        }
 
     
 
