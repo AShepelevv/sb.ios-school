@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		53B6BB03238845F500E32F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B6BB02238845F500E32F3D /* AppDelegate.swift */; };
-		53B6BB05238845F500E32F3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B6BB04238845F500E32F3D /* SceneDelegate.swift */; };
 		53B6BB07238845F500E32F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B6BB06238845F500E32F3D /* ViewController.swift */; };
 		53B6BB0A238845F500E32F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B6BB08238845F500E32F3D /* Main.storyboard */; };
 		53B6BB0C238845F600E32F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B6BB0B238845F600E32F3D /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		53B6BAFF238845F500E32F3D /* redTeamSprint3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redTeamSprint3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B6BB02238845F500E32F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53B6BB04238845F500E32F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		53B6BB06238845F500E32F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53B6BB09238845F500E32F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53B6BB0B238845F600E32F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				53B6BB172388474E00E32F3D /* Cells */,
 				53B6BB162388474400E32F3D /* Screens */,
 				53B6BB02238845F500E32F3D /* AppDelegate.swift */,
-				53B6BB04238845F500E32F3D /* SceneDelegate.swift */,
 				53B6BB08238845F500E32F3D /* Main.storyboard */,
 				53B6BB0B238845F600E32F3D /* Assets.xcassets */,
 				53B6BB0D238845F600E32F3D /* LaunchScreen.storyboard */,
@@ -216,7 +213,6 @@
 				53B6BB03238845F500E32F3D /* AppDelegate.swift in Sources */,
 				53B6BB2623886BEF00E32F3D /* CoreDataService.swift in Sources */,
 				53FA8312238ADB6700B93CD4 /* ImageViewController.swift in Sources */,
-				53B6BB05238845F500E32F3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = redTeamSprint3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = redTeam.redTeamSprint3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,7 +378,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22994NDM8;
 				INFOPLIST_FILE = redTeamSprint3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = redTeam.redTeamSprint3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

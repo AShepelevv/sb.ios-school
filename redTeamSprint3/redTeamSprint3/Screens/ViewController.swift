@@ -28,11 +28,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupViewController()
         
+        UserDefaults.standard.set(false, forKey: "isDownloaded")
+        
         if !UserDefaults.standard.bool(forKey: "isDownloaded") {
-            NetworkService().get()
-            UserDefaults.standard.set(true, forKey: "isDownloaded")
+            NetworkService().get({
+                print("Finish")
+                UserDefaults.standard.set(true, forKey: "isDownloaded")
+                self.fetchResultController = CoreDataService().getFetcResultsController()
+                self.tableView.reloadData()
+            })
         }
-        fetchResultController = CoreDataService().getFetcResultsController()
     }
     
     private func setupViewController() {
@@ -48,13 +53,14 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
     
     private func layoutSubviews() {
         tableView.center = view.center
-        tableView.frame = view.safeAreaLayoutGuide.layoutFrame
+        tableView.frame = view.frame
+//        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
     }
 }
 

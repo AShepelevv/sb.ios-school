@@ -16,11 +16,11 @@ class NetworkService {
         return "https://pixabay.com/api/?key=\(apiKey)&image_type=photo&per_page=100"
     }
     
-    func get() {
+    func get(_ completion: () -> Void = {}) {
         let group = DispatchGroup()
         group.enter()
         getResponse(completion: { imagesData in
-            for imageData in imagesData {
+            for (i, imageData) in imagesData.enumerated() {
                 var smallImageData : Data!
                 var largeImageData : Data!
                 group.enter()
@@ -28,6 +28,7 @@ class NetworkService {
                 queue.async {
                     let subgroup = DispatchGroup()
                     subgroup.enter()
+                    print("Start (\(i))")
                     self.downloadImageData(by: URL(string: imageData.previewURL)!, with: { data in
                         smallImageData = data
                         subgroup.leave()
@@ -38,6 +39,7 @@ class NetworkService {
                         subgroup.leave()
                     })
                     subgroup.wait()
+                    print("End (\(i))")
                     CoreDataService().saveImage(smallImageData: smallImageData, largeImageData: largeImageData)
                     group.leave()
                 }
@@ -45,10 +47,12 @@ class NetworkService {
             group.leave()
         })
         group.wait()
+        completion()
     }
     
     private func getResponse(completion: @escaping ([ImageData]) -> Void) {
-        let session = URLSession.shared
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
         let url = URL(string: downloadLink)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
         let task = session.dataTask(with: request) { data, response, error in
