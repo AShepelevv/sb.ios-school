@@ -27,16 +27,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
-        
-        UserDefaults.standard.set(false, forKey: "isDownloaded")
-        
+            
         if !UserDefaults.standard.bool(forKey: "isDownloaded") {
             NetworkService().get({
-                print("Finish")
                 UserDefaults.standard.set(true, forKey: "isDownloaded")
                 self.fetchResultController = CoreDataService().getFetcResultsController()
                 self.tableView.reloadData()
             })
+        } else {
+            self.fetchResultController = CoreDataService().getFetcResultsController()
+            self.tableView.reloadData()
         }
     }
     

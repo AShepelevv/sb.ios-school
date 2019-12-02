@@ -16,38 +16,30 @@ class NetworkService {
         return "https://pixabay.com/api/?key=\(apiKey)&image_type=photo&per_page=100"
     }
     
-    func get(_ completion: () -> Void = {}) {
-        let group = DispatchGroup()
-        group.enter()
+    func get(_ completion: @escaping () -> Void = {}) {
         getResponse(completion: { imagesData in
-            for (i, imageData) in imagesData.enumerated() {
-                var smallImageData : Data!
-                var largeImageData : Data!
-                group.enter()
-                let queue = DispatchQueue(label: "")
-                queue.async {
-                    let subgroup = DispatchGroup()
-                    subgroup.enter()
-                    print("Start (\(i))")
+            let queue = DispatchQueue(label: "", attributes: .concurrent)
+            queue.async {
+                let group = DispatchGroup()
+                for imageData in imagesData {
+                    var smallImageData : Data!
+                    var largeImageData : Data!
+                    group.enter()
                     self.downloadImageData(by: URL(string: imageData.previewURL)!, with: { data in
                         smallImageData = data
-                        subgroup.leave()
+                        self.downloadImageData(by: URL(string: imageData.largeImageURL)!, with: { data in
+                            largeImageData = data
+                            CoreDataService().saveImage(smallImageData: smallImageData, largeImageData: largeImageData)
+                            group.leave()
+                        })
                     })
-                    subgroup.enter()
-                    self.downloadImageData(by: URL(string: imageData.largeImageURL)!, with: { data in
-                        largeImageData = data
-                        subgroup.leave()
-                    })
-                    subgroup.wait()
-                    print("End (\(i))")
-                    CoreDataService().saveImage(smallImageData: smallImageData, largeImageData: largeImageData)
-                    group.leave()
+                }
+                group.notify(queue: DispatchQueue.main) {
+                    print("Images have been downloaded")
+                    completion()
                 }
             }
-            group.leave()
         })
-        group.wait()
-        completion()
     }
     
     private func getResponse(completion: @escaping ([ImageData]) -> Void) {
