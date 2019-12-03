@@ -16,8 +16,14 @@ class NetworkService {
         return "https://pixabay.com/api/?key=\(apiKey)&image_type=photo&per_page=100"
     }
     
-    func get(_ completion: @escaping () -> Void = {}) {
+    func get(_ completion: @escaping (Bool) -> Void) {
         getResponse(completion: { imagesData in
+            guard let imagesData = imagesData else {
+                DispatchQueue.main.async {
+                     completion(false)
+                }
+                return
+            }
             let queue = DispatchQueue(label: "", attributes: .concurrent)
             queue.async {
                 let group = DispatchGroup()
@@ -36,24 +42,29 @@ class NetworkService {
                 }
                 group.notify(queue: DispatchQueue.main) {
                     print("Images have been downloaded")
-                    completion()
+                    completion(true)
                 }
             }
         })
     }
     
-    private func getResponse(completion: @escaping ([ImageData]) -> Void) {
+    private func getResponse(completion: @escaping ([ImageData]?) -> Void) {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         let url = URL(string: downloadLink)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
         let task = session.dataTask(with: request) { data, response, error in
-            do {
-                let responseObj = try JSONDecoder().decode(Response.self, from: data!)
-                print("Pespond gotten")
-                completion(responseObj.hits)
-            } catch {
-                print(error)
+            if let data = data {
+                do {
+                    let responseObj = try JSONDecoder().decode(Response.self, from: data)
+                    print("Pespond gotten")
+                    completion(responseObj.hits)
+                } catch {
+                    print(error)
+                }
+            } else {
+                print("Empty data")
+                completion(nil)
             }
         }
         task.resume()

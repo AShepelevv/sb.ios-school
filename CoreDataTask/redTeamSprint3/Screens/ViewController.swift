@@ -27,12 +27,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
-            
+        
         if !UserDefaults.standard.bool(forKey: "isDownloaded") {
-            NetworkService().get({
-                UserDefaults.standard.set(true, forKey: "isDownloaded")
-                self.fetchResultController = CoreDataService().getFetcResultsController()
-                self.tableView.reloadData()
+            NetworkService().get({ isSucceded in
+                if isSucceded {
+                    UserDefaults.standard.set(true, forKey: "isDownloaded")
+                    self.fetchResultController = CoreDataService().getFetcResultsController()
+                    self.tableView.reloadData()
+                } else {
+                    let alert = UIAlertController(title: "Something has been gone bad with network", message: "", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             })
         } else {
             self.fetchResultController = CoreDataService().getFetcResultsController()
